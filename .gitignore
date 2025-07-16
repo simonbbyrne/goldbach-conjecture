@@ -1,0 +1,48 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.ilg
+*.ind
+*.idx
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+
+# Jupyter notebook
+.ipynb_checkpoints/
+
+# Backup files
+*~
+*.bak
+*.backup
+
+# Output folders (optional)
+_build/
+output/
+
+# OS or editor specific files
+.DS_Store
+Thumbs.db
+
+# Only track key project files
+!*.tex
+!*.pdf
+!*.ipynb
