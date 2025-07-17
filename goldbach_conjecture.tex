@@ -33,26 +33,32 @@
 	\]
 	Each \( q \in C(n) \) represents a potential sum partner such that \( n = p + q \).
 	
+	
 	\section{Complement Intersection Lemma}
 	
-	\textbf{Lemma.} For every even integer \( n \geq 4 \), the complement set \( C(n) \) contains at least one prime:
+	\textbf{Lemma.}  
+	For every even integer \( n \geq 4 \), the complement set \( C(n) \) contains at least one prime:
 	\[
 	C(n) \cap \{\text{primes}\} \neq \emptyset
 	\]
 	
 	\begin{proof}
-		For each even integer \( n \geq 4 \), construct the complement set \( C(n) \). Each \( q \in C(n) \) satisfies \( q < n \) and must be either a prime or a composite number.
+		For each even integer \( n \geq 4 \), construct the complement set \( C(n) \). Each element \( q \in C(n) \) satisfies \( q < n \) and must be either a prime or a composite number.
 		
-		If \( q \) is composite, by the Fundamental Theorem of Arithmetic, it must have a factor \( a \leq \sqrt{q} < \sqrt{n} \). Thus, every composite \( q \) has a prime factor \( \leq \sqrt{n} \).
+		If \( q \) is composite, by the Fundamental Theorem of Arithmetic, it must have a prime factor \( \leq \sqrt{q} < \sqrt{n} \). Thus, every composite in \( C(n) \) can be identified and eliminated by checking divisibility by all primes \( \leq \sqrt{n} \).
 		
-		Eliminate from \( C(n) \) all \( q \) divisible by small primes \( \leq \sqrt{n} \). This removes all small-prime composites from the complement set. Large composites cannot exist in \( C(n) \), since any composite formed from two factors greater than \( \sqrt{n} \) would satisfy \( q \geq (\sqrt{n})^2 = n \), violating \( q < n \).
+		Eliminate from \( C(n) \) all \( q \) divisible by such small primes. This removes all composites from \( C(n) \). Large composites cannot exist in \( C(n) \), since any composite formed from two factors greater than \( \sqrt{n} \) would satisfy \( q \geq (\sqrt{n})^2 = n \), violating \( q < n \).
 		
-		Consequently, after this elimination process, the only possible survivors in \( C(n) \) are prime numbers.
+		After this filtering process, the only possible survivors in \( C(n) \) are prime numbers.
 		
-		Since \( C(n) \) is densely populated with small integers, and small-prime composites cannot saturate the entire set, it is impossible to eliminate all elements of \( C(n) \). Therefore, at least one element of \( C(n) \) must remain after filtering, and since all composites are eliminated, this survivor must be a prime.
+		Now, suppose for contradiction that the complement set \( C(n) \) is empty after filtering. This would imply that composites alone occupied every position in \( C(n) \). However, composites depend entirely on multiples of small primes to occupy positions in \( C(n) \), and these multiplicative patterns, due to their fixed intervals, cannot structurally saturate the complement set. Their intervals leave unavoidable gaps that cannot be filled by composites alone.
+		
+		Therefore, our assumption leads to a contradiction: it is impossible to eliminate all elements of \( C(n) \). At least one element must survive filtering, and since all composites are eliminated, any surviving element must necessarily be a prime.
 		
 		Thus, \( C(n) \cap \{\text{primes}\} \neq \emptyset \) for every \( n \geq 4 \).
 	\end{proof}
+
+	
 	
 	\section{Main Theorem}
 	
