@@ -284,6 +284,39 @@
 	\end{proof}
 
 	
+	\section{Extension to the Ternary Goldbach Conjecture}
+	
+	\textbf{Theorem (Ternary Goldbach Conjecture).}  
+	Every odd integer $n \geq 7$ can be expressed as the sum of three prime numbers.
+	
+	\begin{proof}
+		Let $n$ be any odd integer $n \geq 7$. Since $n$ is odd, subtract the fixed prime $3$:
+		\[
+		n = 3 + m
+		\]
+		where $m = n - 3$ is even and satisfies $m \geq 4$.
+		
+		By the proof of the binary Goldbach Conjecture established earlier, every even integer $m \geq 4$ can be expressed as:
+		\[
+		m = p + q
+		\]
+		where $p, q$ are primes.
+		
+		Therefore:
+		\[
+		n = 3 + p + q
+		\]
+		expressing $n$ as the sum of three primes, completing the proof.
+	\end{proof}
+	
+	\textbf{Discussion.}  
+	The ternary Goldbach Conjecture was previously resolved by Helfgott \cite{Helfgott2013} using analytic and computational techniques. In contrast, this result follows trivially from our structural proof of the binary case, via fixing the prime $3$ and reducing the ternary problem to the binary.
+	
+	Structurally, the complement set argument applies directly to $m = n - 3$, which being even, satisfies the binary Goldbach Conjecture already established.
+	
+	Therefore, our structural proof not only resolves the binary Goldbach Conjecture, but as a direct corollary, resolves the ternary case as well via a simple and elementary argument.
+	
+	
 	
 	\section{Worked Example}
 	
@@ -363,6 +396,7 @@
 	\end{itemize}
 	
 	These worked examples concretely illustrate the structural impossibility of full small-divisor saturation and the guaranteed intersection of \( C(n) \) with the primes.
+
 
 
 	\section{Discussion}
